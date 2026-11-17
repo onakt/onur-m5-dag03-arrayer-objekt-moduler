@@ -20,11 +20,22 @@ console.log(drycker.join(", "));
 
 // UPPGIFT 2: objekt
 // a) skapa const kopp = { namn: "Latte", pris: 45, vegetarisk: true };
+const kopp: Kopp = { namn: "Latte", pris: 45, vegetarisk: true };
 // b) skriv ut kopp.namn och kopp["pris"]
+console.log(kopp.namn, kopp["pris"]);
 // c) ändra priset till 48, och lägg till egenskapen storlek: "stor"
+kopp.pris = 48;
+kopp.storlek = "stor";
 //    TypeScript klagar på storlek. Beskriv objektet med en interface där storlek är valfri (storlek?: string).
+interface Kopp {
+    namn: string;
+    pris: number;
+    vegetarisk: boolean;
+    storlek?: string;
+}
 // d) skriv ut Object.keys(kopp)
-// TODO
+console.log(Object.keys(kopp));
+// Punktnotation för direkta property-namn, hakparenteser när du vill använda en variabel för att bestämma vilken property du ska komma åt
 
 
 // UPPGIFT 3: arrayer av objekt
