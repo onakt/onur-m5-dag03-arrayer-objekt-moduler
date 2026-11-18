@@ -4,19 +4,20 @@
 import { formateraPris } from "./pris";
 import type { Ratt, OrderRad } from "./typer";
 
+// Gissning: Jag tror att .filter() skulle passa bra här, eftersom att vi vill ha alla rätter som är vegetariska.
 // 1. Alla vegetariska rätter (filter). Returnerar en ny array.
 export function vegetariskaRatter(meny: Ratt[]): Ratt[] {
-  // TODO
+  return meny.filter(ratt => ratt.vegetarisk === true);
 }
 
 // 2. Bara namnen, som en array av text (map). ["Kardemummabulle", ...]
 export function rattNamn(meny: Ratt[]): string[] {
-  // TODO
+  return meny.map(ratt => ratt.namn);
 }
 
 // 3. En prislista som text: "Kardemummabulle – 35 kr" (map + formateraPris)
 export function prislista(meny: Ratt[]): string[] {
-  // TODO
+  return meny.map(ratt => `${ratt.namn} – ${formateraPris(ratt.pris)}`);
 }
 
 // 4. Hitta en rätt via id (find). Returnerar objektet, eller undefined om det saknas.
