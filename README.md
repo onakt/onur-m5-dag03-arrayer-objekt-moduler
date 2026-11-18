@@ -100,8 +100,8 @@ Skapa en ny fil `src/rabatt.ts` med en exporterad funktion `studentPris(pris)` (
 - [X] `src/main.ts` skriver ut rätt i Console för uppgift 1–3.
 - [X] Du använder `filter`, `map`, `find` och `reduce` och kan förklara när du väljer vilken.
 - [X] `sorteraEfterPris` och `medNyttPris` ändrar inte originalet.
-- [ ] `src/rabatt.ts` exporteras och importeras, och du har sett de tre felmeddelandena.
-- [ ] Du har gjort minst sex commits med beskrivande meddelanden.
+- [X] `src/rabatt.ts` exporteras och importeras, och du har sett de tre felmeddelandena.
+- [X] Du har gjort minst sex commits med beskrivande meddelanden.
 
 ## Tips om du fastnar
 
