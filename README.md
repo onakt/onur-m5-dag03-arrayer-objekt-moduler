@@ -89,12 +89,17 @@ Skriv `medNyttPris(ratt, nyttPris)`. Den ska returnera en *kopia* med nytt pris,
 
 Skapa en ny fil `src/rabatt.ts` med en exporterad funktion `studentPris(pris)` (10 % rabatt). Importera den i `src/main.ts` och använd den på menyn. Prova sedan tre fel med flit och läs felen: ta bort `type="module"` i `index.html`, skriv fel filnamn i `import`, och öppna `index.html` genom att dubbelklicka (utan servern). Skriv vad varje fel betydde.
 
+1. **`type="module"` saknas**: Uncaught SyntaxError: import declarations may only appear at top level of a module. Betyder att jag försöker använda import i ett script som webbläsaren inte behandlar som en modul.
+2. **Fel filnamn i import**: Error: Cannot find module './rabat.ts' or its corresponding type declarations. Typescript hittar inte filen som jag försöker importera.
+3. **Öppna index.html utan server**: Cross-Origin begäran blockerad: Same-Origin policyn tillåter inte läsningar av fjärresurs på file:///src/main.ts. (Orsak: CORS begäran inte http). Moduler fungerar bara via en server(Live Server). Dubbelklick på filen gerett CORS-fel. Det betyder att webbläsaren blockerar försöket att läsa en fil direkt från datorns filsystem.
+
+
 ## Kontrollista: så vet du att du är klar
 
-- [ ] Alla 17 tester på `tests.html` är gröna.
-- [ ] `src/main.ts` skriver ut rätt i Console för uppgift 1–3.
-- [ ] Du använder `filter`, `map`, `find` och `reduce` och kan förklara när du väljer vilken.
-- [ ] `sorteraEfterPris` och `medNyttPris` ändrar inte originalet.
+- [X] Alla 17 tester på `tests.html` är gröna.
+- [X] `src/main.ts` skriver ut rätt i Console för uppgift 1–3.
+- [X] Du använder `filter`, `map`, `find` och `reduce` och kan förklara när du väljer vilken.
+- [X] `sorteraEfterPris` och `medNyttPris` ändrar inte originalet.
 - [ ] `src/rabatt.ts` exporteras och importeras, och du har sett de tre felmeddelandena.
 - [ ] Du har gjort minst sex commits med beskrivande meddelanden.
 

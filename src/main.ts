@@ -1,5 +1,6 @@
 // Dag 3, del 1: Arrayer och objekt i Console.
 import { meny } from "./data.ts";
+import { studentPris } from "./rabatt.ts";
 
 // UPPGIFT 1: arrayer
 // a) skapa const drycker: string[] = ["Bryggkaffe", "Latte", "Te"];
@@ -47,3 +48,9 @@ for (const ratt of meny) {
 }
 // c) skriv ut namnet på den sista rätten utan att veta antalet (tips: length - 1)
 console.log("Sista rätten: " + meny[meny.length-1].namn);
+
+// STEG 10: Använd den importerade funktionen `studentpris(pris)` i menyn
+console.log(meny);
+console.log(meny.map(ratt => {
+    return {...ratt, pris: Number(studentPris(ratt.pris).toFixed(2))};
+}));
